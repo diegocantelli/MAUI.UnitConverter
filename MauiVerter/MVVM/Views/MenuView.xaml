@@ -13,7 +13,7 @@
 
     </ContentPage.Resources>
 
-    <Grid ColumnDefinitions=".33*, .33*, 33*"
+    <Grid ColumnDefinitions=".33*, .33*, .33*"
           RowDefinitions=".1*, .3*, .3*, .3*">
         <Label
             Grid.ColumnSpan="3"
@@ -25,6 +25,19 @@
             TextColor="{StaticResource TextColor}"
             VerticalTextAlignment="Center"/>
         
-
+        <!--#region information-->
+        <Grid Grid.Row="1"
+              Padding="15"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor1}">
+            <Image>
+                <Image.Source>
+                    <FontImageSource FontFamily="Icons"
+                                     Glyph="&#xF0A0;"
+                                     Size="50"/>
+                </Image.Source>
+            </Image>
+        </Grid>
+        <!--#endregion-->
     </Grid>
 </ContentPage>
