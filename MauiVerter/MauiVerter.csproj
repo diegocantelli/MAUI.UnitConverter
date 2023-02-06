@@ -50,12 +50,14 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="UnitsNet" Version="5.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Remove="MVVM\" />
 	  <None Remove="MVVM\Views\" />
 	  <None Remove="MVVM\ViewModels\" />
+	  <None Remove="UnitsNet" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="MVVM\" />

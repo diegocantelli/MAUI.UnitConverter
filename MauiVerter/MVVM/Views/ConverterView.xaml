@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:MauiVerter.MVVM.Views"
              x:Class="MauiVerter.MVVM.Views.ConverterView"
              Title="ConverterView">
     <ContentPage.Resources>
@@ -21,7 +21,11 @@
                     Text="100"
                     TextColor="{StaticResource TextColor}"/>
                 <Picker HorizontalTextAlignment="Center"
-                        TextColor="{StaticResource TextColor}"/>
+                        HeightRequest="200"
+                        VerticalTextAlignment="End"
+                        TextColor="{StaticResource TextColor}"
+                        ItemsSource="{Binding FromMeasures}"
+                        SelectedIndex="{Binding CurrentFromMeasure}"/>
         </Grid>
         <Grid Grid.Row="1" Background="{StaticResource AppColor3}">
             <VerticalStackLayout
@@ -34,7 +38,11 @@
                     Text="100"
                     TextColor="{StaticResource TextColor}"/>
                 <Picker HorizontalTextAlignment="Center"
-                        TextColor="{StaticResource TextColor}"/>
+                        VerticalTextAlignment="End"
+                        HeightRequest="200"
+                        TextColor="{StaticResource TextColor}"
+                        ItemsSource="{Binding ToMeasures}"
+                        SelectedIndex="{Binding CurrentToMeasure}"/>
 
         </Grid>
 
