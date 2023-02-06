@@ -66,5 +66,8 @@
 	  <MauiXaml Update="MVVM\Views\MenuView.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\ConverterView.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>

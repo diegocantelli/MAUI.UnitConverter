@@ -6,7 +6,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new MVVM.Views.MenuView();
+		MainPage = new MVVM.Views.ConverterView();
 	}
 }
 
