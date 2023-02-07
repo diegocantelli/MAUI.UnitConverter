@@ -14,23 +14,26 @@
         <Grid BackgroundColor="{StaticResource AppColor1}">
             <VerticalStackLayout
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center">
                 <Entry
                     FontSize="100"
+                    WidthRequest="200"
                     HorizontalTextAlignment="Center"
                     Text="{Binding FromValue}"
-                    TextColor="{StaticResource TextColor}"/>
+                    TextColor="{StaticResource TextColor}"
+                    ReturnCommand="{Binding ReturnCommand}"/>
                 <Picker HorizontalTextAlignment="Center"
-                        HeightRequest="200"
-                        VerticalTextAlignment="End"
                         TextColor="{StaticResource TextColor}"
                         ItemsSource="{Binding FromMeasures}"
                         SelectedItem="{Binding CurrentFromMeasure}"/>
+
+            </VerticalStackLayout>
+                
         </Grid>
         <Grid Grid.Row="1" Background="{StaticResource AppColor3}">
             <VerticalStackLayout
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center">
                 <Label
                     FontSize="100"
                     HorizontalTextAlignment="Center"
@@ -38,12 +41,10 @@
                     Text="{Binding ToValue, StringFormat='{0:0.##}'}"
                     TextColor="{StaticResource TextColor}"/>
                 <Picker HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="End"
-                        HeightRequest="200"
                         TextColor="{StaticResource TextColor}"
                         ItemsSource="{Binding ToMeasures}"
                         SelectedItem="{Binding CurrentToMeasure}"/>
-
+            </VerticalStackLayout>
         </Grid>
 
     </Grid>

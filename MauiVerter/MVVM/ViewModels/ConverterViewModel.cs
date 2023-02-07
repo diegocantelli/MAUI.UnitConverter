@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
+using PropertyChanged;
 using UnitsNet;
 
 namespace MauiVerter.MVVM.ViewModels
 {
+	[AddINotifyPropertyChangedInterface]
 	public class ConverterViewModel
 	{
 		public string QuantityName { get; set; }
@@ -13,6 +16,11 @@ namespace MauiVerter.MVVM.ViewModels
 		public string CurrentToMeasure { get; set; }
 		public double FromValue { get; set; } = 1;
 		public double ToValue { get; set; } = 1;
+		public ICommand ReturnCommand =>
+			new Command(() =>
+			{
+				Converter();
+			});
 
 		public ConverterViewModel()
 		{
