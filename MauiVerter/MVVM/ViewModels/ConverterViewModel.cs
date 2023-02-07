@@ -11,6 +11,8 @@ namespace MauiVerter.MVVM.ViewModels
 		public ObservableCollection<string> ToMeasures { get; set; }
 		public string CurrentFromMeasure { get; set; }
 		public string CurrentToMeasure { get; set; }
+		public double FromValue { get; set; } = 1;
+		public double ToValue { get; set; } = 1;
 
 		public ConverterViewModel()
 		{
@@ -19,7 +21,18 @@ namespace MauiVerter.MVVM.ViewModels
 			ToMeasures = LoadMeasures();
 			CurrentFromMeasure = "Meter";
 			CurrentToMeasure = "Centimeter";
+			Converter();
         }
+
+		public void Converter()
+		{
+			var result =
+				UnitConverter
+				.ConvertByName(FromValue, QuantityName,
+				CurrentFromMeasure, CurrentToMeasure);
+
+			ToValue = result;
+		}
 
 		private ObservableCollection<string> LoadMeasures()
 		{
