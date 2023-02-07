@@ -5,6 +5,6 @@ public partial class ConverterView : ContentPage
 	public ConverterView()
 	{
 		InitializeComponent();
-		BindingContext = new ViewModels.ConverterViewModel();
+		//BindingContext = new ViewModels.ConverterViewModel();
 	}
 }
